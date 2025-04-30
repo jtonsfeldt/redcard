@@ -16,28 +16,53 @@ body {
   
 }
 
+section {	
+	scroll-snap-type: x mandatory;	
+scroll-snap-align: start;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;}
+
+
 .donot {
-  box-sizing:border-box;
-  outline:solid 1px white;
+  box-sizing: border-box;
+  outline: solid 1px white;
   width: 100vw;
   height: 100vh;
-  padding:50px;
-  font-size:3vw; 
-  
+  padding: 50px;
+  font-size: 3vw;
+
   /* change font size based on orientation */
-  
-  display:flex;
+
+  display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
-  
-
-	font-family: sans-serif;
-	scroll-snap-type: x mandatory;	
-	display: flex;
-	-webkit-overflow-scrolling: touch;
-	overflow-x: scroll;
 
   
+  overflow-x: scroll;
+}
+
+@media (orientation: portrait) {
+  .donot {
+    font-size: 5vw; /* Larger font size for portrait orientation */
+  }
+}
+
+@media (orientation: landscape) {
+  .donot {
+    font-size: 3vw; /* Default font size for landscape orientation */
+  }
+}
+
+@media (max-width: 768px) {
+  .donot {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .donot {
+    font-size: 2vw; /* Smaller font size for larger screens */
+  }
 }
