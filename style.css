@@ -1,0 +1,43 @@
+html, body {margin: 0 auto;
+scroll-behavior:smooth;
+    scroll-snap-type: both mandatory;
+
+}
+
+a {
+  color:white;
+}
+
+body {
+  background-color:red;
+  color:white;
+  font-family: sans-serif;
+  font-weight: 600;
+  
+}
+
+.donot {
+  box-sizing:border-box;
+  outline:solid 1px white;
+  width: 100vw;
+  height: 100vh;
+  padding:50px;
+  font-size:3vw; 
+  
+  /* change font size based on orientation */
+  
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+  overflow: hidden;
+  
+
+	font-family: sans-serif;
+	scroll-snap-type: x mandatory;	
+	display: flex;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+
+  
+}
